@@ -1,0 +1,11 @@
+#!/bin/bash
+. "$(dirname "$0")/_/husky.sh"
+
+if [ -z "${SKIP_HOOKS}" ]; then
+	# hook body
+	npx typedoc
+	git add docs
+	SKIP_HOOKS=1 git commit -m "docs: regenerated docs for `git rev-parse HEAD`"
+else
+	exit 0
+fi

@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node16",
+		"outDir": "dist",
+		"target": "es2020",
+		"lib": [
+			"es2020"
+		],
+		"declaration": true,
+		"emitDeclarationOnly": true
+	},
+	"include": [
+		"src"
+	],
+	"typedocOptions": {
+        "entryPoints": ["src/index.ts"],
+        "out": "docs"
+    }
+}

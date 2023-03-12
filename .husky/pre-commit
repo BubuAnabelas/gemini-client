@@ -1,0 +1,12 @@
+#!/bin/bash
+. "$(dirname "$0")/_/husky.sh"
+
+if [ -z "${SKIP_HOOKS}" ]; then
+	# hook body
+	rm -rf docs
+	git add .
+	npx lint-staged
+else
+	exit 0
+fi
+
